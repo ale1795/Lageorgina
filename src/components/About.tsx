@@ -1,11 +1,8 @@
 import { CheckCircle } from "lucide-react";
+import Image from "next/image";
 
 export default function About() {
-    const bullets = [
-        "Presentadora de TV 11 años",
-        "Embajadora UNICEF",
-        "Miss Internacional El Salvador 2008",
-    ];
+    const bullets = ["Presentadora de TV 11 años", "Embajadora UNICEF", "Miss Internacional El Salvador 2008"];
     return (
         <section id="about" className="py-16 md:py-24 bg-white">
             <div className="mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-10 items-center">
@@ -23,11 +20,13 @@ export default function About() {
                     </ul>
                 </div>
                 <div>
-                    <div className="aspect-square rounded-3xl overflow-hidden shadow-xl ring-1 ring-rosegold/20">
-                        <img
+                    <div className="aspect-square rounded-3xl overflow-hidden shadow-xl ring-1 ring-rosegold/20 relative">
+                        <Image
                             src="https://images.unsplash.com/photo-1520975922325-24baf955c082?q=80&w=1600&auto=format&fit=crop"
-                            alt="About"
-                            className="w-full h-full object-cover"
+                            alt="About Georgina"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            className="object-cover"
                         />
                     </div>
                 </div>

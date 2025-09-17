@@ -1,4 +1,5 @@
 import { Button } from "./ui/button";
+import Image from "next/image";
 
 export default function Hero() {
     return (
@@ -7,26 +8,38 @@ export default function Hero() {
             <div className="absolute -bottom-16 -left-16 w-72 h-72 bg-rosegold-light rounded-full blur-3xl" />
             <div className="mx-auto max-w-6xl px-4 grid md:grid-cols-2 gap-10 items-center">
                 <div>
-                    <p className="inline-block px-3 py-1 text-xs rounded-full bg-rosegold/10 text-rosegold">Creadora · Host · Marca personal</p>
+                    <p className="inline-block px-3 py-1 text-xs rounded-full bg-rosegold/10 text-rosegold">
+                        Creadora · Host · Marca personal
+                    </p>
                     <h1 className="mt-4 text-4xl md:text-5xl font-bold leading-tight text-foreground">
-                        Inspira con <span className="text-rosegold">tu historia</span> y comparte <span className="text-rosegold">tu luz</span>
+                        Inspira con <span className="text-rosegold">tu historia</span> y comparte{" "}
+                        <span className="text-rosegold">tu luz</span>
                     </h1>
                     <p className="mt-4 text-foreground/80 max-w-xl">
                         Soy Georgina Cisneros, comunicadora, presentadora y creadora. Descubre eventos, colaboraciones y contenido positivo.
                     </p>
                     <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                        <a href="#contact"><Button>Agenda una llamada</Button></a>
-                        <a href="#services" className="inline-flex items-center justify-center rounded-2xl border px-4 py-2 text-sm border-rosegold hover:bg-rosegold-light">
+                        <a href="#contact">
+                            <Button>Agenda una llamada</Button>
+                        </a>
+                        <a
+                            href="#services"
+                            className="inline-flex items-center justify-center rounded-2xl border px-4 py-2 text-sm border-rosegold hover:bg-rosegold-light"
+                        >
                             Ver servicios
                         </a>
                     </div>
                 </div>
+
                 <div>
-                    <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl ring-1 ring-rosegold/20">
-                        <img
+                    <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-xl ring-1 ring-rosegold/20 relative">
+                        <Image
                             src="https://images.unsplash.com/photo-1519017768885-bc3c9abcf5d5?q=80&w=1600&auto=format&fit=crop"
                             alt="Georgina"
-                            className="w-full h-full object-cover"
+                            fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            priority
+                            className="object-cover"
                         />
                     </div>
                 </div>
