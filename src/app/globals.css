@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+
+:root{
+  --background:#ffffff;
+  --foreground:#3a3a3a;
+  --primary:#b76e79;       /* rosegold */
+  --primary-light:#f7e6e9;
+  --primary-dark:#9a5963;
+}
+
+body{
+  background:var(--background);
+  color:var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
